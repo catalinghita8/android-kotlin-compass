@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Compass Reactive</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="compass_dial">Compass Dial</string>
+
+    <string name="compass_hands">Compass Hands</string>
+
+    <string name="error_direction">Could not provide direction.</string>
+
+    <string name="error_location">Could not update location.</string>
+
+    <string name="error_on_input">You must enter decimal values.</string>
+
+    <string name="error_on_remote_source">Destination could not be retrieved from API.</string>
+
+    <string name="destination_coords">Destination coords</string>
+
+    <string name="insert_destination">Insert destination</string>
+
+    <string name="remote_destination">Remote destination</string>
+
+    <string name="edit_lat">Enter latitude</string>
+
+    <string name="edit_long">Enter longtitude</string>
+
+    <string name="save_button_text">Save and exit</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

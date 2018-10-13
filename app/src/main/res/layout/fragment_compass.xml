@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+
+    <TextView
+        android:id="@+id/destination_loc_text"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tv_top_margin"
+        android:text="@string/destination_coords"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textDestinationLat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/tv_top_margin"
+        android:layout_toRightOf="@+id/destination_loc_text"
+        android:textStyle="bold"
+        tools:text="2.546" />
+
+    <TextView
+        android:id="@+id/textDestinationLong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/tv_top_margin"
+        android:layout_toRightOf="@+id/textDestinationLat"
+        android:textStyle="bold"
+        tools:text="0.436" />
+
+    <TextView
+        android:id="@+id/local_loc_text"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tv_top_margin"
+        android:text="Current loc"
+        android:layout_below="@+id/destination_loc_text"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textCurrentLat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/tv_top_margin"
+        android:layout_below="@+id/textDestinationLat"
+        android:layout_toRightOf="@+id/local_loc_text"
+        android:textStyle="bold"
+        android:text="..." />
+
+    <TextView
+        android:id="@+id/textCurrentLong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/tv_top_margin"
+        android:layout_below="@+id/textDestinationLong"
+        android:layout_toRightOf="@+id/textCurrentLat"
+        android:textStyle="bold"
+        android:text="..." />
+
+    <ProgressBar
+        android:id="@+id/pbHeaderProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_toRightOf="@+id/textDestinationLong"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageMainDial"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/compass_dial"
+        android:src="@drawable/dial" />
+
+    <ImageView
+        android:id="@+id/imageMainHands"
+        android:layout_width="20dp"
+        android:layout_height="240dp"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/compass_hands"
+        android:scaleType="fitXY"
+        android:src="@drawable/hands" />
+
+
+    <ImageView
+        android:id="@+id/imageMainDirection"
+        android:layout_width="50dp"
+        android:layout_height="240dp"
+        android:layout_centerInParent="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/arrow" />
+
+    <Button
+        android:id="@+id/buttonEnterDestination"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/insert_destination" />
+
+
+</RelativeLayout>
