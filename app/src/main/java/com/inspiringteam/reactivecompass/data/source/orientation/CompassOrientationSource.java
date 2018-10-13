@@ -21,9 +21,9 @@ import io.reactivex.schedulers.Schedulers;
 public class CompassOrientationSource implements OrientationDataSource {
     private ReactiveSensors mReactiveSensorsClient;
 
-    private GeoPosition destinationPosition = Constants.SAMPLE_GEOPOSITION;
+    private GeoPosition destinationPosition = Constants.INSTANCE.getSAMPLE_GEOPOSITION();
 
-    private GeoPosition currentPosition = Constants.SAMPLE_GEOPOSITION2;
+    private GeoPosition currentPosition = Constants.INSTANCE.getSAMPLE_GEOPOSITION2();
 
     private float[] mGravity = new float[3];
     private float[] mGeomagnetic = new float[3];

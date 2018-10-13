@@ -31,8 +31,8 @@ android {
         }
 
         release {
-            minifyEnabled true
-            useProguard true
+            minifyEnabled false
+            useProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             testProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguardTest-rules.pro'
         }
@@ -131,8 +131,8 @@ dependencies {
     // Dependencies for Android unit tests
     androidTestImplementation "junit:junit:$rootProject.ext.junitVersion"
     androidTestImplementation "org.mockito:mockito-core:$rootProject.ext.mockitoVersion"
-    androidTestImplementation "com.google.dexmaker:$rootProject.ext.mockitoVersion"
-    androidTestImplementation "com.google.dexmaker:$rootProject.ext.mockitoVersion"
+    androidTestImplementation "com.google.dexmaker:dexmaker:$rootProject.ext.dexmakerVersion"
+    androidTestImplementation "com.google.dexmaker:dexmaker-mockito:$rootProject.ext.dexmakerVersion"
 
     // Espresso UI Testing
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion"

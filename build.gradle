@@ -58,5 +58,5 @@ ext {
     rxandroidVersion = '2.0.1'
     playServicesVersion = '15.0.1'
     reactiveLocationVersion = '1.0.5'
-    dexVersion = '1.2'
+    dexmakerVersion = '1.2'
 }
