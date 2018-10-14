@@ -3,7 +3,7 @@ This repository contains a sample compass app that uses MVVM as its presentation
 
 Project is mainly written in Kotlin with the following essential dependencies: Dagger2 with Dagger-android, RxJava2 with RxAndroid and RxKotlin, Arch LifeCycle, Fused Location and Espresso. Other noteworthy dependencies would be Mockito and Guava.
 ## App Demo
-The [starting point](https://github.com/iutinvg/compass) of the project was a a standard compass that pinpointed the mangnetic poles. The core of the app is now the extra feature that allows the user to enter a pair of coordinates. This causes the compass to pintpoint to a specific direction that leads to the entered destination. The compass pinpoints to the direction of the destination without ever needing an active internet connection, relying totally on internal sensors and GPS.
+The [starting point](https://github.com/iutinvg/compass) of the project was a a standard compass that pinpointed the magnetic poles. The core of the app is now the extra feature that allows the user to enter a pair of coordinates. This causes the compass to pinpoint to a specific direction that leads to the entered destination. The compass pinpoints to the direction of the destination without ever needing an active internet connection, relying totally on internal sensors and GPS.
 
 Also, in order to maintain a correct orientation towards the destination, an internal feature has been added which assures that the user's current location is updated on specific displacements.
 
@@ -14,7 +14,7 @@ Also, in order to maintain a correct orientation towards the destination, an int
 ## Presentation Layer
 MVVM pattern is integrated to facilitate testing and to allow separating the user interface logic from business logic.
 
-As Views were passive in MVP, here the View layer is much more flexibile as an indefinite number of Views can bind to a `ViewModel` (which actually happens in this project). Also, MVVM enforces a clear separation between Views and their master - ViewModel, as the latter holds no reference to Views. The model layer is completely isolated through the repository pattern.
+As Views were passive in MVP, here the View layer is much more flexible as an indefinite number of Views can bind to a `ViewModel` (which actually happens in this project). Also, MVVM enforces a clear separation between Views and their master - ViewModel, as the latter holds no reference to Views. The model layer is completely isolated through the repository pattern.
 
 ![Presentation](https://github.com/catalinghita8/android-kotlin-compass/blob/master/readme_pics/dagger_graph.png)
 
