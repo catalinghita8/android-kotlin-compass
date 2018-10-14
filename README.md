@@ -1,7 +1,7 @@
 # Android - Compass to destination
 This repository contains a sample compass app that uses MVVM as its presentation layer pattern. **The app aims to centralize data flow and at the same time be extremely flexible to creating variants for automated and manual testing**. Also, the project implements and follows the guidelines presented in Google Sample [MVVM+RXJAVA-android](https://github.com/googlesamples/android-architecture/tree/dev-todo-mvvm-rxjava/).
 
-Project is mainly written in Kotlin with the following essential dependencies: Dagger2 with Dagger-android, RxJava2 with RxAndroid and RxKotlin, Arch LifeCycle, Fused Location and Espresso. Other noteworthy dependencies would be Mockito, Chrome CustomTabs and Guava.
+Project is mainly written in Kotlin with the following essential dependencies: Dagger2 with Dagger-android, RxJava2 with RxAndroid and RxKotlin, Arch LifeCycle, Fused Location and Espresso. Other noteworthy dependencies would be Mockito and Guava.
 ## App Demo
 The [starting point](https://github.com/iutinvg/compass) of the project was a a standard compass that pinpointed the mangnetic poles. The core of the app is now the extra feature that allows the user to enter a pair of coordinates. This causes the compass to pintpoint to a specific direction that leads to the entered destination. The compass pinpoints to the direction of the destination without ever needing an active internet connection, relying totally on internal sensors and GPS.
 
@@ -29,8 +29,8 @@ The repository handles data interactions and transactions from two main data sou
 The project tends to have a fully reactive approach, as all events (from sensors or location updates) are handled and propagated downstream all the way to the final consumer, the `Views`.
 
 In order to achieve this, two external dependencies are used:
-- [RxLocation](https://github.com/patloew/RxLocation) that transforms location updates to a reactive stream that can be observed/consumed.
-- [ReactiveSensors](https://github.com/pwittchen/ReactiveSensors) that transforms sensor updates to a reactive stream that can be observed/consumed. (This lib has been locally enhanced to support multiple sensor events observation)
+- [RxLocation](https://github.com/patloew/RxLocation) that transforms location updates into a reactive stream that can be observed/consumed.
+- [ReactiveSensors](https://github.com/pwittchen/ReactiveSensors) that transforms sensor updates into a reactive stream that can be observed/consumed. (This lib has been locally enhanced to support multiple sensor events observation)
 
 We are also able to notice RxJava/RxKotlin benefits when data is being retrieved from the repository through different sources and then  channeled through the `ViewModel` and finally consumed in `Views`:
 - Data Flow is centralized.
@@ -50,7 +50,7 @@ The below diagram illustrates the most significant relations between components 
 ![Dependecy](https://github.com/catalinghita8/android-kotlin-compass/blob/master/readme_pics/presentation_layer.png)
 _Note: The above diagram might help you understand how Dagger-android works. Also, only essential components/modules/objects are included here, this is suggested by the "…"_
 
-## Testing (In progress..)
+## Testing (In progress...)
 The apps' components are extremely easy to test due to DI achieved through Dagger and the project's structure, but as well for the reason that the data flow is centralized with RxJava/RxKotlin which results in highly testable pieces of code. 
 
 Unit tests are conducted with the help of Mockito and Instrumentation tests with the help of Espresso. 
@@ -61,8 +61,8 @@ Unit tests are conducted with the help of Mockito and Instrumentation tests with
 - Possess lightweight structure due to MVVM presentation pattern.
 - Is scalable and easy to expand.
 ## Weak points
-- Possess high code base - simpler approaches might lower code size
-- Possess medium complexity - other approaches might lower complexity
+- Possess high code base - simpler approaches might lower code size.
+- Possess medium complexity - other approaches might lower complexity.
 
 # Final notes:
 - The app is not a polished ready-to-publish product, it acts as a boilerplate project or as a starting point for android enthusiasts out there.
